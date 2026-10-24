@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusNotes | Student Notes Sharing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <h2>📚 CampusNotes</h2>
+    <span>Student Notes Sharing Platform</span>
+  </header>
+
+  <section class="hero">
+    <h1>Learn Together, Grow Together</h1>
+    <p>Upload, discover and share college study materials.</p>
+    <input type="text" id="searchInput"
+      placeholder="Search notes by title, subject or semester...">
+  </section>
+
+  <main class="container">
+    <section class="stats">
+      <div class="stat-card">
+        <h2 id="totalNotes">0</h2>
+        <p>Total Notes</p>
+      </div>
+      <div class="stat-card">
+        <h2 id="totalSubjects">0</h2>
+        <p>Subjects</p>
+      </div>
+      <div class="stat-card">
+        <h2 id="totalDownloads">0</h2>
+        <p>Downloads</p>
+      </div>
+    </section>
+
+    <section class="upload-section">
+      <h2>Upload Study Material</h2>
+
+      <form id="uploadForm">
+        <input type="text" id="title"
+          placeholder="Material title" required>
+
+        <input type="text" id="subject"
+          placeholder="Subject name" required>
+
+        <select id="semester" required>
+          <option value="">Select semester</option>
+          <option>Semester 1</option>
+          <option>Semester 2</option>
+          <option>Semester 3</option>
+          <option>Semester 4</option>
+          <option>Semester 5</option>
+          <option>Semester 6</option>
+          <option>Semester 7</option>
+          <option>Semester 8</option>
+        </select>
+
+        <select id="category" required>
+          <option value="">Select category</option>
+          <option>Lecture Notes</option>
+          <option>Previous Papers</option>
+          <option>Lab Records</option>
+          <option>Assignments</option>
+          <option>Presentations</option>
+        </select>
+
+        <input type="text" id="uploader"
+          placeholder="Your name" required>
+
+        <input type="file" id="fileInput"
+          accept=".pdf,.doc,.docx,.ppt,.pptx,.txt"
+          required>
+
+        <button type="submit">Upload Material</button>
+      </form>
+
+      <p class="hint">
+        Supported files: PDF, DOC, DOCX, PPT, PPTX and TXT.
+        Maximum file size: 5 MB.
+      </p>
+    </section>
+
+    <section class="materials-section">
+      <div class="section-heading">
+        <h2>Study Materials</h2>
+        <select id="filterCategory">
+          <option value="">All Categories</option>
+          <option>Lecture Notes</option>
+          <option>Previous Papers</option>
+          <option>Lab Records</option>
+          <option>Assignments</option>
+          <option>Presentations</option>
+        </select>
+      </div>
+
+      <div id="notesContainer" class="notes-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 CampusNotes | Made for College Students 🎓</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
